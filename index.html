@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>SoroTek | Inovação, Design e Automação Empresarial em Sorocaba</title>
-    <meta name="description" content="Transforme sua empresa com a SoroTek. Especialistas em Automação com IA, Planilhas Avançadas, Design Gráfico, Marketing Digital e Soluções Tecnológicas em Sorocaba.">
+    <meta name="description" content="Transforme sua empresa com a SoroTek. Especialistas em Automação com IA, Planilhas Avançadas, Design Gráfico, Marketing Digital e Soluções Tecnológicas em Sorocaba e Região.">
+    <meta name="keywords" content="automação comercial sorocaba, inteligência artificial sorocaba, design gráfico sorocaba, social media sorocaba, drone sorocaba, planilhas inteligentes excel, sorotek">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sorotek.com.br/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sorotek.com.br/">
+    <meta property="og:title" content="SoroTek | Inovação, Design e Automação Empresarial">
+    <meta property="og:description" content="Aceleramos sua empresa in Sorocaba com automação baseada em Inteligência Artificial, planilhas avançadas e design gráfico de alta conversão.">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.sorotek.com.br/">
+    <meta name="twitter:title" content="SoroTek | Inovação, Design e Automação Empresarial">
+    <meta name="twitter:description" content="Aceleramos sua empresa em Sorocaba com automação baseada em Inteligência Artificial, planilhas avançadas e design gráfico de alta conversão.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "SoroTek",
+      "description": "Especialistas em Automação com IA, Planilhas Avançadas, Design Gráfico, Marketing Digital e Soluções Tecnológicas em Sorocaba.",
+      "url": "https://www.sorotek.com.br/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sorocaba",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.50167",
+        "longitude": "-47.45806"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
+        *, *::before, *::after { box-sizing: border-box; }
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: #090d16;
@@ -46,6 +84,20 @@
         .testimonials-slider:hover {
             animation-play-state: paused;
         }
+
+        /* Animação para a rolagem infinita de ofertas e promoções */
+        @keyframes promoScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .promos-slider {
+            display: flex;
+            width: max-content;
+            animation: promoScroll 28s linear infinite;
+        }
+        .promos-slider:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="text-slate-100 antialiased overflow-x-hidden">
@@ -61,8 +113,9 @@
                 <a href="#cultura" class="hover:text-cyan-400 transition-colors">Cultura</a>
                 <a href="#servicos" class="hover:text-cyan-400 transition-colors">Serviços</a>
                 <a href="#galeria" class="hover:text-cyan-400 transition-colors">Portfólio</a>
-                <a href="#depoimentos" class="hover:text-cyan-400 transition-colors">Depoimentos</a>
+                <a href="#promocoes" class="hover:text-cyan-400 transition-colors">Ofertas</a>
                 <a href="#diferenciais" class="hover:text-cyan-400 transition-colors">Diferenciais</a>
+                <a href="#depoimentos" class="hover:text-cyan-400 transition-colors">Depoimentos</a>
                 <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
             </nav>
             <div class="hidden md:flex">
@@ -70,7 +123,7 @@
                     <i class="fa-brands fa-whatsapp text-lg"></i> Fale pelo Whatsapp
                 </a>
             </div>
-            <button class="md:hidden text-slate-400 hover:text-white text-2xl focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden text-slate-400 hover:text-white text-2xl focus:outline-none" aria-label="Abrir Menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -79,591 +132,721 @@
             <a href="#cultura" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Cultura</a>
             <a href="#servicos" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Serviços</a>
             <a href="#galeria" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Portfólio</a>
-            <a href="#depoimentos" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Depoimentos</a>
+            <a href="#promocoes" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Ofertas</a>
             <a href="#diferenciais" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Diferenciais</a>
+            <a href="#depoimentos" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Depoimentos</a>
             <a href="#contato" class="block text-slate-300 hover:text-cyan-400 py-2 font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contato</a>
             <a href="https://wa.me/551599613698?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20SoroTek!" target="_blank" rel="noopener noreferrer" class="block bg-green-600 text-white font-bold text-center py-3 rounded-lg" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><i class="fa-brands fa-whatsapp mr-2"></i>Fale pelo Whatsapp</a>
         </div>
     </header>
 
-    <div class="w-full bg-[#030712] pt-20 border-b border-slate-800/50 text-center relative overflow-hidden h-12 flex items-center justify-center z-40">
-        <div id="carousel-1" class="carousel-item active w-full text-xs font-bold tracking-wider text-cyan-400 uppercase">
-            <i class="fa-solid fa-robot mr-2 text-blue-500 animate-pulse"></i> Automação empresarial de processos impulsionada por inteligência artificial
-        </div>
-        <div id="carousel-2" class="carousel-item w-full text-xs font-bold tracking-wider text-emerald-400 uppercase">
-            <i class="fa-solid fa-table mr-2 text-emerald-500 animate-pulse"></i> Substitua sistemas pagos por planilhas inteligentes e automatizadas
-        </div>
-        <div id="carousel-3" class="carousel-item w-full text-xs font-bold tracking-wider text-purple-400 uppercase">
-            <i class="fa-solid fa-palette mr-2 text-purple-500 animate-pulse"></i> Design gráfico, mídias sociais e produções visuais de alto padrão
-        </div>
-        <div id="carousel-4" class="carousel-item w-full text-xs font-bold tracking-wider text-blue-400 uppercase">
-            <i class="fa-solid fa-plane mr-2 text-cyan-500 animate-pulse"></i> Captação audiovisual de impacto com imagens aéreas de Drone
-        </div>
-    </div>
-
-    <section id="inicio" class="relative pt-20 pb-24 md:pt-36 md:pb-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/40 via-[#090d16] to-[#090d16] overflow-hidden">
-        <div class="absolute top-20 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute top-40 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
-                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider shadow-inner shadow-cyan-500/5">
-                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Tecnologia & Design Integrados
-                    </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                        Aceleramos sua empresa com <span class="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 bg-clip-text text-transparent drop-shadow-sm">Inteligência e Design</span>
-                    </h1>
-                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        Da automação de processos com IA à produção de conteúdo de alto impacto. A SoroTek une engenharia de dados, design corporativo e marketing estratégico para transformar a operação do seu negócio em Sorocaba e região.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#servicos" class="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl transition-all duration-300 text-center shadow-xl shadow-cyan-500/20 transform hover:-translate-y-0.5">
-                            Conhecer Nossos Serviços
-                        </a>
-                        <a href="#contato" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700/80 font-bold px-8 py-4 rounded-xl transition-all duration-300 text-center backdrop-blur-sm">
-                            Agendar Consultoria Gratuita
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-5 relative hidden lg:block">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-3xl opacity-15 blur-2xl"></div>
-                    <div class="relative bg-slate-950/70 border border-slate-800/80 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-                            <div class="flex gap-2">
-                                <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
-                                <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
-                                <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
-                            </div>
-                            <span class="text-xs text-slate-500 font-mono">sorotek_core_system.js</span>
-                        </div>
-                        <div class="space-y-4 font-mono text-sm text-slate-400">
-                            <p><span class="text-cyan-400">const</span> empresa = <span class="text-yellow-400">"SoroTek"</span>;</p>
-                            <p><span class="text-cyan-400">let</span> status = <span class="text-yellow-400">"Otimizando Processos..."</span>;</p>
-                            <p class="text-slate-600">// Automação inteligente activa</p>
-                            <p class="text-green-400">-> IA integrada com planilhas com sucesso.</p>
-                            <p class="text-green-400">-> Identidade visual e mídias sociais atualizadas.</p>
-                            <p class="text-green-400">-> Estrutura corporativa operando a 100%.</p>
-                        </div>
-                    </div>
-                </div>
+    <main>
+        <div class="w-full bg-[#030712] pt-20 border-b border-slate-800/50 text-center relative overflow-hidden h-14 flex items-center justify-center z-40 px-4">
+            <div id="carousel-1" class="carousel-item active w-full text-[10px] sm:text-xs font-bold tracking-wider text-cyan-400 uppercase">
+                <i class="fa-solid fa-robot mr-2 text-blue-500 animate-pulse"></i> Automação empresarial de processos impulsionada por inteligência artificial
             </div>
-        </div>
-    </section>
-
-    <section id="cultura" class="py-24 bg-[#090d16] border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Nossos Fundamentos</h2>
-                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">Cultura Organizacional</p>
-                <p class="text-slate-400">O que nos move diariamente a construir e entregar soluções de excelência tecnológica para o mercado.</p>
+            <div id="carousel-2" class="carousel-item w-full text-[10px] sm:text-xs font-bold tracking-wider text-emerald-400 uppercase">
+                <i class="fa-solid fa-table mr-2 text-emerald-500 animate-pulse"></i> Substitua sistemas pagos por planilhas inteligentes e automatizadas
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
-                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-lg">
-                        <i class="fa-solid fa-rocket"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white">Missão</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Desenvolver e integrar ecossistemas inteligentes de automação e design gráfico de alta qualidade, otimizando processos e alavancando a visibilidade de negócios de forma prática e mensurável.</p>
-                </div>
-                <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg">
-                        <i class="fa-solid fa-eye"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white">Visão</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Tornar-se a principal referência em integration inteligente de IA e soluções corporativas em Sorocaba e Região, provando que estruturas enxutas orientadas a dados superam softwares tradicionais obsoletos.</p>
-                </div>
-                <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
-                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white">Valores</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Transparência analítica, obsessão por eficiência, precisão visual, inovação tecnológica contínua, compromisso irrestrito com o retorno financeiro (ROI) de nossos parceiros comerciais.</p>
-                </div>
-                <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
-                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 text-lg">
-                        <i class="fa-solid fa-bullseye"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-white">Metas</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Reduzir em até 60% os custos operacionais com licenças de softwares de nossos clientes através de migrações bem-sucedidas e expandir a infraestrutura de captação digital regional.</p>
-                </div>
+            <div id="carousel-3" class="carousel-item w-full text-[10px] sm:text-xs font-bold tracking-wider text-purple-400 uppercase">
+                <i class="fa-solid fa-palette mr-2 text-purple-500 animate-pulse"></i> Design gráfico, mídias sociais e produções visuais de alto padrão
             </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="py-24 bg-[#090d16] relative border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full inline-block">Soluções Ponta a Ponta</h2>
-                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">O que fazemos pelo seu negócio?</p>
-                <p class="text-slate-400">Agrupamos nosso ecossistema de soluções para cobrir todas as necessidades de design, automação, estrutura interna e posicionamento digital da sua marca.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-table"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Dados, Planilhas &amp; Inteligência Artificial</h3>
-                        <p class="text-slate-400 text-sm mb-6">Estruturação de dados robusta e engenharia inteligente para substituir softwares complexos e caros.</p>
-                        <ul class="space-y-3 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-                                <span><strong>Projetos de Planilhas:</strong> Desenvolvimento customizado em Excel e Google Planilhas.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-                                <span><strong>Automação com IA:</strong> Integração de inteligência artificial diretamente em suas planilhas operacionais.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-                                <span><strong>Conversão de Sistemas Pagos:</strong> Migração de softwares proprietários caros para ecossistemas otimizados de planilhas.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 relative overflow-hidden">
-                        <div class="w-full aspect-square rounded-2xl overflow-hidden relative shadow-inner">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Dashboard 1" class="slide-card-1 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Análise de Dados 2" class="slide-card-1 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Automação &amp; Estrutura Empresarial</h3>
-                        <p class="text-slate-400 text-sm mb-6">Eficiência operacional extrema eliminando tarefas repetitivas e capacitando equipes.</p>
-                        <ul class="space-y-3 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
-                                <span><strong>Automação de Processos com IA:</strong> Robôs e fluxos inteligentes executando rotinas administrativas de forma autônoma.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
-                                <span><strong>Automação Empresarial:</strong> Conexão e integração nativa entre diferentes setores e ferramentas do seu negócio.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
-                                <span><strong>Consultoria Empresarial &amp; Treinamentos:</strong> Diagnóstico de gargalos operacionais e treinamentos corporativos especializados em tecnologia.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 relative overflow-hidden">
-                        <div class="w-full aspect-square rounded-2xl overflow-hidden relative shadow-inner">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Automação IA 1" class="slide-card-2 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Integração Sistemas 2" class="slide-card-2 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Design, Criação &amp; Comunicação Visual</h3>
-                        <p class="text-slate-400 text-sm mb-6">Construção de identidades marcantes e materiais que comunicam autoridade e profissionalismo.</p>
-                        <ul class="space-y-3 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-purple-400 mt-1"></i>
-                                <span><strong>Designer Gráfico &amp; Social Media:</strong> Criação de layouts de alto padrão técnico e artes de conversão para redes sociais.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-purple-400 mt-1"></i>
-                                <span><strong>Produções Gráficas &amp; Comunicação Visual:</strong> Arte-finalista focado em materiais de impressão e sinalização corporativa de grande formato.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-purple-400 mt-1"></i>
-                                <span><strong>Kits Completos para Empresas:</strong> Pacotes estruturais com papelaria, apresentações comerciais e assets corporativos unificados.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 relative overflow-hidden">
-                        <div class="w-full aspect-square rounded-2xl overflow-hidden relative shadow-inner">
-                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Design Gráfico 1" class="slide-card-3 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
-                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Comunicação Social Media 2" class="slide-card-3 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Audiovisual, Redes Sociais &amp; Marketing</h3>
-                        <p class="text-slate-400 text-sm mb-6">Atração de novos clientes através de produções em vídeo qualificadas e tráfego estratégico.</p>
-                        <ul class="space-y-3 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1"></i>
-                                <span><strong>Marketing Digital &amp; Conteúdo:</strong> Planejamento editorial completo, redação e posicionamento online voltado para geração de leads.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1"></i>
-                                <span><strong>Produção &amp; Edição de Vídeos:</strong> Criação de criativos e vídeos dinâmicos de alta conversão para Reels, Shorts e YouTube.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1"></i>
-                                <span><strong>Imagens Aéreas com Drone:</strong> Captação profissional de fotos e vídeos aéreos para destacar a infraestrutura do seu negócio.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 relative overflow-hidden">
-                        <div class="w-full aspect-square rounded-2xl overflow-hidden relative shadow-inner">
-                            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80" alt="Audiovisual 1" class="slide-card-4 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
-                            <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=600&q=80" alt="Drone Imagens Aéreas 2" class="slide-card-4 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="galeria" class="py-24 bg-[#050911] border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Portfólio em Ação</h2>
-                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">Galeria de Demonstração</p>
-                <p class="text-slate-400">Clique nas imagens quadradas para expandir e analisar os nossos padrões visuais e operacionais em alta resolução.</p>
-                
-                <div class="flex flex-wrap items-center justify-center gap-2 pt-6">
-                    <button onclick="filterGallery('todos')" class="px-4 py-2 text-xs font-bold uppercase rounded-lg bg-cyan-500 text-slate-950 transition-all filter-btn" id="btn-todos">Todos</button>
-                    <button onclick="filterGallery('dados')" class="px-4 py-2 text-xs font-bold uppercase rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all filter-btn" id="btn-dados">Planilhas & IA</button>
-                    <button onclick="filterGallery('design')" class="px-4 py-2 text-xs font-bold uppercase rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all filter-btn" id="btn-design">Design & Gráfica</button>
-                    <button onclick="filterGallery('marketing')" class="px-4 py-2 text-xs font-bold uppercase rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all filter-btn" id="btn-marketing">Marketing & Drone</button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
-                <div class="gallery-item dados aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Business Planilha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-cyan-400">Dashboards Inteligentes</span>
-                    </div>
-                </div>
-                <div class="gallery-item dados aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="Data IA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-cyan-400">Análise de Dados com IA</span>
-                    </div>
-                </div>
-                <div class="gallery-item design aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=400&q=80" alt="Design Identidade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-purple-400">Design Corporativo</span>
-                    </div>
-                </div>
-                <div class="gallery-item design aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Social Media" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-purple-400">Artes Redes Sociais</span>
-                    </div>
-                </div>
-                <div class="gallery-item marketing aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=400&q=80" alt="Câmera Estúdio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-blue-400">Produção de Vídeos</span>
-                    </div>
-                </div>
-                <div class="gallery-item marketing aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=400&q=80" alt="Drone Imagem" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-blue-400">Imagens com Drone</span>
-                    </div>
-                </div>
-                <div class="gallery-item dados aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Hardware Automação" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-cyan-400">Automação Conectada</span>
-                    </div>
-                </div>
-                <div class="gallery-item design aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&w=1000&q=80')">
-                    <img src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&w=400&q=80" alt="Kit Branding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span class="text-xs font-bold text-purple-400">Kits para Empresas</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeModal()">
-        <button class="absolute top-6 right-6 text-white text-3xl hover:text-cyan-400">&times;</button>
-        <img id="modal-img" src="" alt="Imagem Expandida" class="max-w-full max-h-[85vh] rounded-xl object-contain shadow-2xl animate-fade-in" onclick="event.stopPropagation()">
-    </div>
-
-    <section class="py-12 bg-[#040810] border-t border-slate-900 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6 text-center lg:text-left">Tecnologia validada e parceiros de ecossistema</p>
-            <div class="relative w-full opacity-40 hover:opacity-70 transition-opacity duration-300 overflow-hidden border-b border-slate-800/40 pb-6">
-                <div class="logos-slider items-center gap-16">
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-google mr-2"></i>GOOGLE CO.</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-microsoft mr-2"></i>MICROSOFT</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-aws mr-2"></i>AMAZON AWS</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-python mr-2"></i>PYTHON CORE</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-solid fa-database mr-2"></i>ORACLE DB</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-figma mr-2"></i>FIGMA DESIGN</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-google mr-2"></i>GOOGLE CO.</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-microsoft mr-2"></i>MICROSOFT</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-aws mr-2"></i>AMAZON AWS</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-python mr-2"></i>PYTHON CORE</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-solid fa-database mr-2"></i>ORACLE DB</span>
-                    <span class="text-white font-bold text-lg tracking-wider font-mono"><i class="fa-brands fa-figma mr-2"></i>FIGMA DESIGN</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="depoimentos" class="py-24 bg-[#050911] border-b border-slate-900 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-            <div class="text-center max-w-3xl mx-auto space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Resultados Comprovados</h2>
-                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">Quem confia na SoroTek</p>
-                <p class="text-slate-400">Veja o feedback de gestores e líderes corporativos que transformaram as suas operações em Sorocaba.</p>
+            <div id="carousel-4" class="carousel-item w-full text-[10px] sm:text-xs font-bold tracking-wider text-blue-400 uppercase">
+                <i class="fa-solid fa-plane mr-2 text-cyan-500 animate-pulse"></i> Captação audiovisual de impacto com imagens aéreas de Drone
             </div>
         </div>
 
-        <div class="relative w-full overflow-hidden px-4">
-            <div class="testimonials-slider gap-6 py-4">
-                <div class="bg-[#0e1424] border border-slate-800/60 p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[350px] sm:w-[420px] shrink-0 whitespace-normal">
-                    <div class="space-y-3">
-                        <div class="text-yellow-500 flex gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm italic font-light">"A migração do nosso software de gestão interna para o ecossistema de planilhas automatizadas com inteligência artificial da SoroTek reduziu drasticamente o nosso custo mensal fixo em 65%. Excecional trabalho!"</p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Empresário" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Ricardo Mendes</h5>
-                            <span class="text-xs text-slate-500">Diretor Executivo - Sorocaba Log</span>
-                        </div>
-                    </div>
-                </div>
+        <section id="inicio" class="relative pt-12 pb-20 md:pt-36 md:pb-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/40 via-[#090d16] to-[#090d16] overflow-hidden">
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-40 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
 
-                <div class="bg-[#0e1424] border border-slate-800/60 p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[350px] sm:w-[420px] shrink-0 whitespace-normal">
-                    <div class="space-y-3">
-                        <div class="text-yellow-500 flex gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm italic font-light">"A qualidade das produções gráficas e da identidade visual que o time desenhou para as nossas redes sociais mudou o patamar da marca. Captar novos clientes ficou muito mais fácil devido à autoridade que transmitimos."</p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Empresária" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Camila Rocha</h5>
-                            <span class="text-xs text-slate-500">CEO - Inova Imóveis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/60 p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[350px] sm:w-[420px] shrink-0 whitespace-normal">
-                    <div class="space-y-3">
-                        <div class="text-yellow-500 flex gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm italic font-light">"A captação de imagens aéreas com drone da nossa estrutura física aliada ao treinamento corporativo tecnológico que deram para os nossos colaboradores gerou valor imensurável para a nossa holding empresarial."</p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Gestor" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Marcos Fonseca</h5>
-                            <span class="text-xs text-slate-500">Gestor Operacional - TecnoVale SP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/60 p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[350px] sm:w-[420px] shrink-0 whitespace-normal">
-                    <div class="space-y-3">
-                        <div class="text-yellow-500 flex gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm italic font-light">"A migração do nosso software de gestão interna para o ecossistema de planilhas automatizadas com inteligência artificial da SoroTek reduziu drasticamente o nosso custo mensal fixo em 65%. Excecional trabalho!"</p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Empresário" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Ricardo Mendes</h5>
-                            <span class="text-xs text-slate-500">Diretor Executivo - Sorocaba Log</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/60 p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[350px] sm:w-[420px] shrink-0 whitespace-normal">
-                    <div class="space-y-3">
-                        <div class="text-yellow-500 flex gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm italic font-light">"A qualidade das produções gráficas e da identidade visual que o time desenhou para as nossas redes sociais mudou o patamar da marca. Captar novos clientes ficou muito mais fácil devido à autoridade que transmitimos."</p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Empresária" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Camila Rocha</h5>
-                            <span class="text-xs text-slate-500">CEO - Inova Imóveis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1424] border border-slate-800/60 p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[350px] sm:w-[420px] shrink-0 whitespace-normal">
-                    <div class="space-y-3">
-                        <div class="text-yellow-500 flex gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm italic font-light">"A captação de imagens aéreas com drone da nossa estrutura física aliada ao treinamento corporativo tecnológico que deram para os nossos colaboradores gerou valor imensurável para a nossa holding empresarial."</p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Gestor" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Marcos Fonseca</h5>
-                            <span class="text-xs text-slate-500">Gestor Operacional - TecnoVale SP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="diferenciais" class="py-24 bg-[#090d16] relative border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Por que escolher a SoroTek?</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Unimos o design técnico à precisão dos dados</h2>
-                    <p class="text-slate-300 leading-relaxed">
-                        Diferente de agências tradicionais que cuidam apenas do visual, ou consultorias de TI focadas estritamente em código, a SoroTek entrega soluções integradas. Nós estruturamos e automatizamos seus bastidores financeiros e operacionais com IA, ao mesmo tempo em que cuidamos de toda a sua comunicação visual e atração de clientes.
-                    </p>
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-bullseye"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold">Foco em ROI Real</h4>
-                                <p class="text-sm text-slate-400">Cortamos custos substituindo softwares caros por planilhas automatizadas de altíssima performance.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-users"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold">Parceiro Único (Full-Service)</h4>
-                                <p class="text-sm text-slate-400">Do criativo para redes sociais e imagens de drone à automação interna com IA. Um único ponto de contato.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2">
-                        <span class="text-3xl font-black text-cyan-400 block">100%</span>
-                        <span class="text-xs text-slate-400 uppercase tracking-widest font-medium">Soluções Customizadas</span>
-                    </div>
-                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2 lg:mt-6">
-                        <span class="text-3xl font-black text-cyan-400 block">-60%</span>
-                        <span class="text-xs text-slate-400 uppercase tracking-widest font-medium">Custo com Software</span>
-                    </div>
-                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2">
-                        <span class="text-3xl font-black text-cyan-400 block">+5x</span>
-                        <span class="text-xs text-slate-400 uppercase tracking-widest font-medium">Velocidade Processos</span>
-                    </div>
-                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2 lg:mt-6">
-                        <span class="text-3xl font-black text-cyan-400 block">Sorocaba</span>
-                        <span class="text-xs text-slate-400 uppercase tracking-widest font-medium">&amp; Região Metropolitana</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="py-24 bg-[#050911] relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue-950/20 via-[#050911] to-[#050911]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl mx-auto bg-gradient-to-b from-[#0e1424] to-[#0e1424]/40 border border-slate-800/80 rounded-3xl p-8 sm:p-12 shadow-2xl">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    
-                    <div class="lg:col-span-5 space-y-6">
-                        <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight">Pronto para dar o próximo passo tecnológico?</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Fale diretamente com nosso time técnico e descubra como a automação, o design corporativo e a IA podem transformar seus resultados comerciais.
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider shadow-inner shadow-cyan-500/5">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Tecnologia & Design Integrados
+                        </span>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+                            Aceleramos sua empresa com <span class="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 bg-clip-text text-transparent drop-shadow-sm">Inteligência e Design</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                            Da automação de processos com IA à produção de conteúdo de alto impacto. A SoroTek une engenharia de dados, design corporativo e marketing estratégico para transformar a operação do seu negócio em Sorocaba e região.
                         </p>
-                        <div class="space-y-4 pt-2 text-sm text-slate-300">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-location-dot text-cyan-400 w-4"></i>
-                                <span>Sorocaba, SP</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#servicos" class="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl transition-all duration-300 text-center shadow-xl shadow-cyan-500/20 transform hover:-translate-y-0.5">
+                                Conhecer Nossos Serviços
+                            </a>
+                            <a href="#contato" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700/80 font-bold px-8 py-4 rounded-xl transition-all duration-300 text-center backdrop-blur-sm">
+                                Agendar Consultoria Gratuita
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative hidden lg:block">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-3xl opacity-15 blur-2xl"></div>
+                        <div class="relative bg-slate-950/70 border border-slate-800/80 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                                <div class="flex gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
+                                </div>
+                                <span class="text-xs text-slate-500 font-mono">sorotek_core_system.js</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-envelope text-cyan-400 w-4"></i>
-                                <span>contato@sorotek.com.br</span>
+                            <div class="space-y-4 font-mono text-sm text-slate-400">
+                                <p><span class="text-cyan-400">const</span> empresa = <span class="text-yellow-400">"SoroTek"</span>;</p>
+                                <p><span class="text-cyan-400">let</span> status = <span class="text-yellow-400">"Otimizando Processos..."</span>;</p>
+                                <p class="text-slate-600">// Automação inteligente ativa</p>
+                                <p class="text-green-400">-> IA integrada com planilhas com sucesso.</p>
+                                <p class="text-green-400">-> Identidade visual e mídias sociais atualizadas.</p>
+                                <p class="text-green-400">-> Estrutura corporativa operando a 100%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultura" class="py-20 bg-[#090d16] border-b border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Nossos Fundamentos</h2>
+                    <p class="text-2xl sm:text-4xl font-black text-white tracking-tight">Cultura Organizacional</p>
+                    <p class="text-sm sm:text-base text-slate-400">O que nos move diariamente a construir e entregar soluções de excelência tecnológica para o mercado.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-lg">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Missão</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Desenvolver e integrar ecossistemas inteligentes de automação e design gráfico de alta qualidade, otimizando processos e alavancando a visibilidade de negócios de forma prática e mensurável.</p>
+                    </div>
+                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Visão</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Tornar-se a principal referência em integração inteligente de IA e soluções corporativas em Sorocaba e Região, provando que estruturas enxutas orientadas a dados superam softwares tradicionais obsoletos.</p>
+                    </div>
+                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Valores</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Transparência analítica, obsessão por eficiência, precisão visual, inovação tecnológica contínua, compromisso irrestrito com o retorno financeiro (ROI) de nossos parceiros comerciais.</p>
+                    </div>
+                    <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/80 space-y-3 shadow-xl">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 text-lg">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Metas</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Reduzir em até 60% os custos operacionais com licenças de softwares de nossos clientes através de migrações bem-sucedidas e expandir a infraestrutura de captação digital regional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-20 bg-[#090d16] relative border-b border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full inline-block">Soluções Ponta a Ponta</h2>
+                    <p class="text-2xl sm:text-4xl font-black text-white tracking-tight">O que fazemos pelo seu negócio?</p>
+                    <p class="text-sm sm:text-base text-slate-400">Agrupamos nosso ecossistema de soluções para cobrir todas as necessidades de design, automação, estrutura interna e posicionamento digital da sua marca.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-table"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Dados, Planilhas &amp; Inteligência Artificial</h3>
+                            <p class="text-slate-400 text-sm mb-6">Estruturação de dados robusta e engenharia inteligente para substituir softwares complexos e caros.</p>
+                            <ul class="space-y-3 text-slate-300 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Projetos de Planilhas:</strong> Desenvolvimento customizado em Excel e Google Planilhas.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Automação com IA:</strong> Integração de inteligência artificial diretamente em suas planilhas operacionais.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Conversão de Sistemas Pagos:</strong> Migração de softwares proprietários caros para ecossistemas otimizados de planilhas.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="px-6 sm:px-8 pb-8 relative overflow-hidden">
+                            <div class="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Dashboards e Analytics" class="slide-card-1 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Análise de Dados Avançada" class="slide-card-1 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
                             </div>
                         </div>
                     </div>
 
-                    <div class="lg:col-span-7 w-full">
-                        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Solicitação enviada! Entraremos em contato em breve.');">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label class="text-xs font-semibold text-slate-400 uppercase">Nome Completo</label>
-                                    <input type="text" required placeholder="Seu nome" class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none transition-colors text-sm">
-                                </div>
-                                <div class="space-y-1">
-                                    <label class="text-xs font-semibold text-slate-400 uppercase">WhatsApp</label>
-                                    <input type="tel" required placeholder="(15) 99613-6898" class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none transition-colors text-sm">
-                                </div>
+                    <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-robot"></i>
                             </div>
-                            <div class="space-y-1">
-                                <label class="text-xs font-semibold text-slate-400 uppercase">Qual serviço você precisa?</label>
-                                <select class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 focus:outline-none transition-colors text-sm">
-                                    <option class="bg-slate-900">Automação com IA &amp; Planilhas Avançadas</option>
-                                    <option class="bg-slate-900">Design Gráfico &amp; Social Media</option>
-                                    <option class="bg-slate-900">Marketing Digital &amp; Vídeos/Imagens de Drone</option>
-                                    <option class="bg-slate-900">Consultoria Empresarial &amp; Treinamentos</option>
-                                    <option class="bg-slate-900">Kit Completo Corporativo</option>
-                                </select>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Automação &amp; Estrutura Empresarial</h3>
+                            <p class="text-slate-400 text-sm mb-6">Eficiência operacional extrema eliminando tarefas repetitivas e capacitando equipes.</p>
+                            <ul class="space-y-3 text-slate-300 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Automação de Processos com IA:</strong> Robôs e fluxos inteligentes executando rotinas administrativas de forma autônoma.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Automação Empresarial:</strong> Conexão e integração nativa entre diferentes setores e ferramentas do seu negócio.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Consultoria Empresarial &amp; Treinamentos:</strong> Diagnóstico de gargalos operacionais e treinamentos corporativos especializados em tecnologia.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="px-6 sm:px-8 pb-8 relative overflow-hidden">
+                            <div class="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Braço Robótico e Automação" class="slide-card-2 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Circuitos Tecnológicos Integrados" class="slide-card-2 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
                             </div>
-                            <div class="space-y-1">
-                                <label class="text-xs font-semibold text-slate-400 uppercase">Mensagem (Opcional)</label>
-                                <textarea rows="3" placeholder="Fale brevemente sobre o seu projeto..." class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none transition-colors text-sm resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-palette"></i>
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-extrabold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-cyan-500/20 text-sm uppercase tracking-wider">
-                                Solicitar Diagnóstico Comercial
-                            </button>
-                        </form>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Design, Criação &amp; Comunicação Visual</h3>
+                            <p class="text-slate-400 text-sm mb-6">Construção de identidades marcantes e materiais que comunicam autoridade e profissionalismo.</p>
+                            <ul class="space-y-3 text-slate-300 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-purple-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Designer Gráfico &amp; Social Media:</strong> Criação de layouts de alto padrão técnico e artes de conversão para redes sociais.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-purple-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Produções Gráficas &amp; Comunicação Visual:</strong> Arte-finalista focado em materiais de impressão e sinalização corporativa de grande formato.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-purple-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Kits Completos para Empresas:</strong> Pacotes estruturais com papelaria, apresentações comerciais e assets corporativos unificados.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="px-6 sm:px-8 pb-8 relative overflow-hidden">
+                            <div class="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Design de Interface no Monitor" class="slide-card-3 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Artes Digitais Modernas" class="slide-card-3 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#0e1424] border border-slate-800/80 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group shadow-2xl flex flex-col justify-between">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Audiovisual, Redes Sociais &amp; Marketing</h3>
+                            <p class="text-slate-400 text-sm mb-6">Atração de novos clientes através de produções em vídeo qualificadas e tráfego estratégico.</p>
+                            <ul class="space-y-3 text-slate-300 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Marketing Digital &amp; Conteúdo:</strong> Planejamento editorial completo, redação e posicionamento online voltado para geração de leads.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Produção &amp; Edição de Vídeos:</strong> Criação de criativos e vídeos dinâmicos de alta conversão para Reels, Shorts e YouTube.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Imagens Aéreas com Drone:</strong> Captação profissional de fotos e vídeos aéreos para destacar a infraestrutura do seu negócio.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="px-6 sm:px-8 pb-8 relative overflow-hidden">
+                            <div class="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80" alt="Câmera de Cinema em Gravação" class="slide-card-4 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 filter grayscale group-hover:grayscale-0">
+                                <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=600&q=80" alt="Voo de Drone Profissional" class="slide-card-4 absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 filter grayscale group-hover:grayscale-0">
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <footer class="bg-[#030712] border-t border-slate-900 text-slate-500 text-xs py-8">
+            </div>
+        </section>
+
+        <section id="galeria" class="py-20 bg-[#050911] border-b border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Portfólio em Ação</h2>
+                    <p class="text-2xl sm:text-4xl font-black text-white tracking-tight">Galeria de Demonstração</p>
+                    <p class="text-sm text-slate-400">Clique nas imagens quadradas para expandir e analisar os nossos padrões visuais e operacionais em alta resolução.</p>
+                    
+                    <div class="flex flex-wrap items-center justify-center gap-2 pt-6">
+                        <button onclick="filterGallery('todos')" class="px-4 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg bg-cyan-500 text-slate-950 transition-all filter-btn" id="btn-todos">Todos</button>
+                        <button onclick="filterGallery('dados')" class="px-4 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all filter-btn" id="btn-dados">Planilhas & IA</button>
+                        <button onclick="filterGallery('design')" class="px-4 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all filter-btn" id="btn-design">Design & Gráfica</button>
+                        <button onclick="filterGallery('marketing')" class="px-4 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all filter-btn" id="btn-marketing">Marketing & Drone</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                    <div class="gallery-item dados aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Painel de Controle de Negócios" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-cyan-400">Dashboards Inteligentes</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item dados aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="Engenharia de Dados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-cyan-400">Análise de Dados com IA</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item design aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=400&q=80" alt="Mockup de Identidade Criada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-purple-400">Design Corporativo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item design aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Design Editorial Redes Sociais" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-purple-400">Artes Redes Sociais</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item marketing aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=400&q=80" alt="Edição Audiovisual Profissional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-blue-400">Produção de Vídeos</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item marketing aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=400&q=80" alt="Fotografia Aérea com Drone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-blue-400">Imagens com Drone</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item dados aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Microchips e Automação Operacional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-cyan-400">Automação Conectada</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item design aspect-square overflow-hidden rounded-xl bg-slate-900 border border-slate-800 cursor-pointer relative group" onclick="openModal('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&w=400&q=80" alt="Papelaria e Branding de Marca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-bold text-purple-400">Kits para Empresas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeModal()">
+            <button class="absolute top-6 right-6 text-white text-3xl hover:text-cyan-400" aria-label="Fechar Modal">&times;</button>
+            <img id="modal-img" src="" alt="Ampliação de Projeto do Portfólio" class="max-w-full max-h-[85vh] rounded-xl object-contain shadow-2xl animate-fade-in" onclick="event.stopPropagation()">
+        </div>
+
+        <section class="py-12 bg-[#040810] border-t border-slate-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative w-full opacity-40 hover:opacity-70 transition-opacity duration-300 overflow-hidden border-b border-slate-800/40 pb-6">
+                    <div class="logos-slider items-center gap-16">
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-google"></i>GOOGLE CO.</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-microsoft"></i>MICROSOFT</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-aws"></i>AMAZON AWS</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-python"></i>PYTHON CORE</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-solid fa-database"></i>ORACLE DB</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-figma"></i>FIGMA DESIGN</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-google"></i>GOOGLE CO.</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-microsoft"></i>MICROSOFT</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-aws"></i>AMAZON AWS</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-python"></i>PYTHON CORE</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-solid fa-database"></i>ORACLE DB</span>
+                        <span class="text-white font-bold text-base sm:text-lg tracking-wider font-mono flex items-center gap-2"><i class="fa-brands fa-figma"></i>FIGMA DESIGN</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="py-20 bg-[#090d16] relative border-b border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Por que escolher a SoroTek?</span>
+                        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Unimos o design técnico à precisão analítica dos dados</h2>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Diferente de agências tradicionais que cuidam apenas do visual, ou consultorias de TI focadas estritamente em código complexo, a SoroTek entrega soluções reais e lucrativas. Nós estruturamos e automatizamos seus bastidores financeiros e operacionais, ao mesmo tempo em que cuidamos de toda a sua comunicação visual e atração de clientes.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-left max-w-2xl mx-auto lg:mx-0">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-bullseye text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Foco em ROI Real</h4>
+                                    <p class="text-xs text-slate-400">Substituímos licenças mensais caras por automações sob medida com retorno financeiro visível.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Parceiro Único (Full-Service)</h4>
+                                    <p class="text-xs text-slate-400">Do criativo para redes sociais e imagens de drone à IA interna. Centralize sua demanda sem estresse.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-comments-dollar text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Zero Custos Ocultos</h4>
+                                    <p class="text-xs text-slate-400">Projetos com escopo fechado e valores transparentes. Você sabe exatamente o que vai receber e investir.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-headset text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Suporte &amp; Treinamento Inclusos</h4>
+                                    <p class="text-xs text-slate-400">Não entregamos e sumimos. Capacitamos seu time técnico para que utilizem as soluções com total autonomia.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 sm:col-span-2">
+                                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-map-location-dot text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Atendimento Local e Humanizado</h4>
+                                    <p class="text-xs text-slate-400">Sediados em Sorocaba/SP. Entendemos a dinâmica econômica regional e atendemos você de ponta a ponta com reuniões alinhadas e proximidade total.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 grid grid-cols-2 gap-4 max-w-2xl mx-auto w-full">
+                        <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2">
+                            <span class="text-2xl sm:text-3xl font-black text-cyan-400 block">100%</span>
+                            <span class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest font-medium">Customizado</span>
+                        </div>
+                        <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2 lg:mt-6">
+                            <span class="text-2xl sm:text-3xl font-black text-emerald-400 block">-60%</span>
+                            <span class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest font-medium">Custos Fixos</span>
+                        </div>
+                        <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2">
+                            <span class="text-2xl sm:text-3xl font-black text-cyan-400 block">+5x</span>
+                            <span class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest font-medium">Produtividade</span>
+                        </div>
+                        <div class="bg-[#0e1424] p-6 rounded-2xl border border-slate-800/60 text-center space-y-2 lg:mt-6">
+                            <span class="text-xl sm:text-2xl font-black text-cyan-400 block">Sorocaba</span>
+                            <span class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest font-medium">&amp; Região Metropolitana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promocoes" class="py-20 bg-[#070b14] border-b border-slate-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full inline-block">Oportunidades Especiais</h2>
+                    <p class="text-2xl sm:text-4xl font-black text-white tracking-tight">Ofertas e Promoções</p>
+                    <p class="text-sm text-slate-400">Confira abaixo os nossos pacotes promocionais ativos por tempo limitado. Passe o rato sobre os cards para pausar a rotação automática.</p>
+                </div>
+
+                <div class="relative w-full overflow-hidden">
+                    <div class="promos-slider gap-6 py-4">
+                        
+                        <div class="bg-[#0e1424] border border-emerald-500/30 rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl w-[280px] sm:w-[360px] shrink-0 whitespace-normal" onclick="openModal('https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=1000&q=80')">
+                            <div class="absolute top-3 left-3 bg-emerald-500 text-slate-950 font-black text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md z-10 shadow-md">Ativo</div>
+                            <div class="aspect-square w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=500&q=80" alt="Promoção Combo Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 filter brightness-90 group-hover:brightness-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 opacity-80 flex flex-col justify-end p-4">
+                                    <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest mb-1">Combo Automação</span>
+                                    <h3 class="text-base font-bold text-white leading-tight">Migração de Sistema + Planilha IA</h3>
+                                    <p class="text-xs text-slate-400 mt-1 line-clamp-2">Troque seu software caro por nossa planilha inteligente com IA integrada e ganhe 20% de desconto na implantação.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-cyan-500/20 rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl w-[280px] sm:w-[360px] shrink-0 whitespace-normal" onclick="openModal('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1000&q=80')">
+                            <div class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-black text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md z-10 shadow-md">Vagas Limitadas</div>
+                            <div class="aspect-square w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80" alt="Promoção Identidade Visual" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 filter brightness-90 group-hover:brightness-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 opacity-80 flex flex-col justify-end p-4">
+                                    <span class="text-xs text-cyan-400 font-bold uppercase tracking-widest mb-1">Identidade &amp; Social Media</span>
+                                    <h3 class="text-base font-bold text-white leading-tight">Kit Identidade Visual + 12 Artes</h3>
+                                    <p class="text-xs text-slate-400 mt-1 line-clamp-2">Renove o visual corporativo da sua marca e garanta o primeiro mês de gerenciamento visual de posts incluso no pacote.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-purple-500/20 rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl w-[280px] sm:w-[360px] shrink-0 whitespace-normal" onclick="openModal('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=80')">
+                            <div class="absolute top-3 left-3 bg-purple-500 text-white font-black text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md z-10 shadow-md">Bônus Especial</div>
+                            <div class="aspect-square w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=500&q=80" alt="Promoção Drone Audiovisual" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 filter brightness-90 group-hover:brightness-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 opacity-80 flex flex-col justify-end p-4">
+                                    <span class="text-xs text-purple-400 font-bold uppercase tracking-widest mb-1">Audiovisual de Impacto</span>
+                                    <h3 class="text-base font-bold text-white leading-tight">Vídeo Institucional + Imagens de Drone</h3>
+                                    <p class="text-xs text-slate-400 mt-1 line-clamp-2">Feche a produção do seu vídeo institucional para Shorts/Reels e ganhe a captação de imagens aéreas sem custos extras.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-emerald-500/30 rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl w-[280px] sm:w-[360px] shrink-0 whitespace-normal" onclick="openModal('https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=1000&q=80')">
+                            <div class="absolute top-3 left-3 bg-emerald-500 text-slate-950 font-black text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md z-10 shadow-md">Ativo</div>
+                            <div class="aspect-square w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=500&q=80" alt="Promoção Combo Start Duplicada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 filter brightness-90 group-hover:brightness-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 opacity-80 flex flex-col justify-end p-4">
+                                    <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest mb-1">Combo Automação</span>
+                                    <h3 class="text-base font-bold text-white leading-tight">Migração de Sistema + Planilha IA</h3>
+                                    <p class="text-xs text-slate-400 mt-1 line-clamp-2">Troque seu software caro por nossa planilha inteligente com IA integrada e ganhe 20% de desconto na implantação.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-cyan-500/20 rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl w-[280px] sm:w-[360px] shrink-0 whitespace-normal" onclick="openModal('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1000&q=80')">
+                            <div class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-black text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md z-10 shadow-md">Vagas Limitadas</div>
+                            <div class="aspect-square w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80" alt="Promoção Identidade Visual Duplicada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 filter brightness-90 group-hover:brightness-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 opacity-80 flex flex-col justify-end p-4">
+                                    <span class="text-xs text-cyan-400 font-bold uppercase tracking-widest mb-1">Identidade &amp; Social Media</span>
+                                    <h3 class="text-base font-bold text-white leading-tight">Kit Identidade Visual + 12 Artes</h3>
+                                    <p class="text-xs text-slate-400 mt-1 line-clamp-2">Renove o visual corporativo da sua marca e garanta o primeiro mês de gerenciamento visual de posts incluso no pacote.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-purple-500/20 rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl w-[280px] sm:w-[360px] shrink-0 whitespace-normal" onclick="openModal('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=80')">
+                            <div class="absolute top-3 left-3 bg-purple-500 text-white font-black text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md z-10 shadow-md">Bônus Especial</div>
+                            <div class="aspect-square w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=500&q=80" alt="Promoção Drone Audiovisual Duplicada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 filter brightness-90 group-hover:brightness-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 opacity-80 flex flex-col justify-end p-4">
+                                    <span class="text-xs text-purple-400 font-bold uppercase tracking-widest mb-1">Audiovisual de Impacto</span>
+                                    <h3 class="text-base font-bold text-white leading-tight">Vídeo Institucional + Imagens de Drone</h3>
+                                    <p class="text-xs text-slate-400 mt-1 line-clamp-2">Feche a produção do seu vídeo institucional para Shorts/Reels e ganhe a captação de imagens aéreas sem custos extras.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-20 bg-[#050911] border-b border-slate-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Resultados Comprovados</h2>
+                    <p class="text-2xl sm:text-4xl font-black text-white tracking-tight">Quem confia na SoroTek</p>
+                    <p class="text-sm text-slate-400">Veja o feedback de gestores e líderes corporativos que transformaram as suas operações em Sorocaba.</p>
+                </div>
+
+                <div class="relative w-full overflow-hidden">
+                    <div class="testimonials-slider gap-6 py-4">
+                        <div class="bg-[#0e1424] border border-slate-800/60 p-6 sm:p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[290px] sm:w-[420px] shrink-0 whitespace-normal">
+                            <div class="space-y-3">
+                                <div class="text-yellow-500 flex gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs sm:text-sm italic font-light">"A migração do nosso software de gestão interna para o ecossistema de planilhas automatizadas com inteligência artificial da SoroTek reduziu drasticamente o nosso custo mensal fixo em 65%. Excecional trabalho!"</p>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Foto Ricardo Mendes" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Ricardo Mendes</h4>
+                                    <span class="text-xs text-slate-500">Diretor Executivo - Sorocaba Log</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-slate-800/60 p-6 sm:p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[290px] sm:w-[420px] shrink-0 whitespace-normal">
+                            <div class="space-y-3">
+                                <div class="text-yellow-500 flex gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs sm:text-sm italic font-light">"A qualidade das produções gráficas e da identidade visual que o time desenhou para as nossas redes sociais mudou o patamar da marca. Captar novos clientes ficou muito mais fácil devido à autoridade que transmitimos."</p>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Foto Camila Rocha" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Camila Rocha</h4>
+                                    <span class="text-xs text-slate-500">CEO - Inova Imóveis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-slate-800/60 p-6 sm:p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[290px] sm:w-[420px] shrink-0 whitespace-normal">
+                            <div class="space-y-3">
+                                <div class="text-yellow-500 flex gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs sm:text-sm italic font-light">"A captação de imagens aéreas com drone da nossa estrutura física aliada ao treinamento corporativo tecnológico que deram para os nossos colaboradores gerou valor imensurável para a nossa holding empresarial."</p>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Foto Marcos Fonseca" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Marcos Fonseca</h4>
+                                    <span class="text-xs text-slate-500">Gestor Operacional - TecnoVale SP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-slate-800/60 p-6 sm:p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[290px] sm:w-[420px] shrink-0 whitespace-normal">
+                            <div class="space-y-3">
+                                <div class="text-yellow-500 flex gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs sm:text-sm italic font-light">"A segurança interna e a otimização estrutural que trouxeram mudaram o nosso dia a dia."</p>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Foto Ricardo Mendes Duplicada" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Ricardo Mendes</h4>
+                                    <span class="text-xs text-slate-500">Diretor Executivo - Sorocaba Log</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-slate-800/60 p-6 sm:p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[290px] sm:w-[420px] shrink-0 whitespace-normal">
+                            <div class="space-y-3">
+                                <div class="text-yellow-500 flex gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs sm:text-sm italic font-light">"A qualidade das produções gráficas e da identidade visual que o time desenhou para as nossas redes sociais mudou o patamar da marca. Captar novos clientes ficou muito mais fácil devido à autoridade que transmitimos."</p>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Foto Camila Rocha Duplicada" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Camila Rocha</h4>
+                                    <span class="text-xs text-slate-500">CEO - Inova Imóveis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#0e1424] border border-slate-800/60 p-6 sm:p-8 rounded-3xl shadow-xl space-y-4 flex flex-col justify-between w-[290px] sm:w-[420px] shrink-0 whitespace-normal">
+                            <div class="space-y-3">
+                                <div class="text-yellow-500 flex gap-1">
+                                    <i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i><i class="fa-solid fa-star text-xs"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs sm:text-sm italic font-light">"A captação de imagens aéreas com drone da nossa estrutura física aliada ao treinamento corporativo tecnológico que deram para os nossos colaboradores gerou valor imensurável para a nossa holding empresarial."</p>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-800/60">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Foto Marcos Fonseca Duplicada" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Marcos Fonseca</h4>
+                                    <span class="text-xs text-slate-500">Gestor Operacional - TecnoVale SP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-20 bg-[#050911] relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue-950/20 via-[#050911] to-[#050911]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto bg-gradient-to-b from-[#0e1424] to-[#0e1424]/40 border border-slate-800/80 rounded-3xl p-6 sm:p-12 shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        
+                        <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+                            <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight">Pronto para dar o próximo passo tecnológico?</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Fale diretamente com nosso time técnico e descubra como a automação, o design corporativo e a IA podem transformar seus resultados comerciais.
+                            </p>
+                            <div class="space-y-4 pt-2 text-sm text-slate-300 inline-block text-left lg:block">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-location-dot text-cyan-400 w-4"></i>
+                                    <span>Sorocaba, SP</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-envelope text-cyan-400 w-4"></i>
+                                    <span>contato@sorotek.com.br</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 w-full">
+                            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Solicitação enviada! Entraremos em contato em breve.');">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase">Nome Completo</label>
+                                        <input type="text" required placeholder="Seu nome" class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none transition-colors text-sm">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase">WhatsApp</label>
+                                        <input type="tel" required placeholder="(15) 99613-698" class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none transition-colors text-sm">
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase">Qual serviço você precisa?</label>
+                                    <select class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 focus:outline-none transition-colors text-sm">
+                                        <option class="bg-slate-900">Automação com IA &amp; Planilhas Avançadas</option>
+                                        <option class="bg-slate-900">Design Gráfico &amp; Social Media</option>
+                                        <option class="bg-slate-900">Marketing Digital &amp; Vídeos/Imagens de Drone</option>
+                                        <option class="bg-slate-900">Consultoria Empresarial &amp; Treinamentos</option>
+                                        <option class="bg-slate-900">Kit Completo Corporativo</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase">Mensagem (Opcional)</label>
+                                    <textarea rows="3" placeholder="Fale brevemente sobre o seu projeto..." class="w-full bg-[#050911] border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none transition-colors text-sm resize-none"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-extrabold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-cyan-500/20 text-sm uppercase tracking-wider">
+                                    Solicitar Diagnóstico Comercial
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#030712] border-t border-slate-900 text-slate-500 text-[11px] sm:text-xs py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 text-center sm:text-left">
                 <span class="font-bold text-slate-400">SoroTek</span>
                 <span>&copy; 2026 - Todos os direitos reservados.</span>
             </div>
-            <div class="flex gap-6">
-                <button onclick="smoothScrollToTop()" class="hover:text-cyan-400 transition-colors">Voltar ao topo</button>
+            <div class="flex items-center gap-5 text-lg">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#1877F2] transition-colors duration-300" title="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#E1306C] transition-colors duration-300" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#00F2EA] transition-colors duration-300" title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#FF0000] transition-colors duration-300" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
             </div>
         </div>
     </footer>
 
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
-        <a href="https://wa.me/551599613698?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20com%20a%20SoroTek!" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl shadow-green-600/40 transition-all duration-300 transform hover:-translate-y-1" title="Fale pelo WhatsApp">
-            <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-center gap-3">
+        <a href="https://wa.me/551599613698?text=Olá%2C%20gostaria%20de%20um%20orçamento%20com%20a%20SoroTek!" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-500 text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-2xl shadow-green-600/40 transition-all duration-300 transform hover:-translate-y-1" title="Fale pelo WhatsApp">
+            <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
         </a>
         
-        <button onclick="smoothScrollToTop()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-cyan-400 w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none" title="Voltar ao Topo">
-            <i class="fa-solid fa-arrow-up text-lg"></i>
+        <button onclick="smoothScrollToTop()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-cyan-400 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none" title="Voltar ao Topo">
+            <i class="fa-solid fa-arrow-up text-base sm:text-lg"></i>
         </button>
     </div>
 
@@ -680,9 +863,11 @@
         let currentSlide = 1;
         const totalSlides = 4;
         setInterval(() => {
-            document.getElementById(`carousel-${currentSlide}`).classList.remove('active');
+            const currentEl = document.getElementById(`carousel-${currentSlide}`);
+            if(currentEl) currentEl.classList.remove('active');
             currentSlide = currentSlide >= totalSlides ? 1 : currentSlide + 1;
-            document.getElementById(`carousel-${currentSlide}`).classList.add('active');
+            const nextEl = document.getElementById(`carousel-${currentSlide}`);
+            if(nextEl) nextEl.classList.add('active');
         }, 4000);
 
         // Imagens Rotativas Internas dos Cards de Soluções
@@ -712,8 +897,10 @@
             });
             
             const activeBtn = document.getElementById(`btn-${category}`);
-            activeBtn.classList.replace('bg-slate-900', 'bg-cyan-500');
-            activeBtn.classList.replace('text-slate-400', 'text-slate-950');
+            if (activeBtn) {
+                activeBtn.classList.replace('bg-slate-900', 'bg-cyan-500');
+                activeBtn.classList.replace('text-slate-400', 'text-slate-950');
+            }
 
             items.forEach(item => {
                 if (category === 'todos' || item.classList.contains(category)) {
@@ -724,16 +911,18 @@
             });
         }
 
-        // Sistema Interativo do Lightbox Modal da Galeria
+        // Sistema Interativo do Lightbox Modal da Galeria e Promoções
         function openModal(src) {
             const modal = document.getElementById('gallery-modal');
             const modalImg = document.getElementById('modal-img');
-            modalImg.src = src;
-            modal.classList.remove('hidden');
+            if(modalImg && modal) {
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+            }
         }
         function closeModal() {
             const modal = document.getElementById('gallery-modal');
-            modal.classList.add('hidden');
+            if(modal) modal.classList.add('hidden');
         }
     </script>
 
